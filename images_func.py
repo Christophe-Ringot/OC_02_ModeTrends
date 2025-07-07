@@ -1,3 +1,29 @@
+import numpy as np
+import base64
+from PIL import Image
+import io
+
+CLASS_MAPPING = {
+    "Background": 0,
+    "Hat": 1,
+    "Hair": 2,
+    "Sunglasses": 3,
+    "Upper-clothes": 4,
+    "Skirt": 5,
+    "Pants": 6,
+    "Dress": 7,
+    "Belt": 8,
+    "Left-shoe": 9,
+    "Right-shoe": 10,
+    "Face": 11,
+    "Left-leg": 12,
+    "Right-leg": 13,
+    "Left-arm": 14,
+    "Right-arm": 15,
+    "Bag": 16,
+    "Scarf": 17
+}
+
 def get_image_dimensions(img_path):
     """
     Get the dimensions of an image.
@@ -67,3 +93,20 @@ def create_masks(results, width, height):
             combined_mask[mask_array > 0] = 0 # Class ID for Background is 0
 
     return combined_mask
+
+def display_segmented_images_batch(original_image_paths, segmentation_masks):
+    """
+    Affiche les images originales et leurs masques segmentés.
+
+    Args:
+        original_image_paths (list): Liste des chemins des images originales.
+        segmentation_masks (list): Liste des masques segmentés (NumPy arrays).
+    """
+    # Matplotlib, ça vous parle ?
+    # Alors... au travail ! 😉
+
+# # Afficher les résultats du batch
+# if batch_seg_results:
+#     display_segmented_images_batch(image_paths, batch_seg_results)
+# else:
+#     print("Aucun résultat de segmentation à afficher.")
