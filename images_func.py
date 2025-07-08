@@ -1,7 +1,7 @@
+import matplotlib.pyplot as plt
+from PIL import Image
 import numpy as np
 import base64
-from PIL import Image
-import matplotlib.pyplot as plt
 import io
 
 CLASS_MAPPING = {
@@ -113,11 +113,11 @@ def segment_images_batch(list_of_image_paths):
 
     return batch_segmentations
 
-# Appeler la fonction pour segmenter les images listées dans image_paths
-if image_paths:
-    print(f"\nTraitement de {len(image_paths)} image(s) en batch...")
-    batch_seg_results = segment_images_batch(image_paths)
-    print("Traitement en batch terminé.")
-else:
-    batch_seg_results = []
-    print("Aucune image à traiter en batch.")
+# # Appeler la fonction pour segmenter les images listées dans image_paths
+# if image_paths:
+#     print(f"\nTraitement de {len(image_paths)} image(s) en batch...")
+#     batch_seg_results = segment_images_batch(image_paths)
+#     print("Traitement en batch terminé.")
+# else:
+#     batch_seg_results = []
+#     print("Aucune image à traiter en batch.")
